@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Clear Browser Data",
+    "version": "1.0",
+    "description": "A Chrome extension to clear all browser data.",
+    "permissions": [
+        "browsingData",
+        "notifications"
+    ],
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "commands": {
+        "clearBrowserData": {
+            "suggested_key": {
+                "default": "Alt+C"
+            },
+            "description": "Clear Browser Data"
+        }
+    }
+}
