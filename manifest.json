@@ -5,7 +5,8 @@
     "description": "A Chrome extension to clear all browser data.",
     "permissions": [
         "browsingData",
-        "notifications"
+        "notifications",
+        "tabs"
     ],
     "background": {
         "service_worker": "service-worker.js"
