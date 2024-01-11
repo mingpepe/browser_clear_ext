@@ -2,7 +2,7 @@ chrome.commands.onCommand.addListener(async function (command) {
     if (command === "clearBrowserData") {
         const newTab = await chrome.tabs.create({});
         const tabs = await chrome.tabs.query({});
-        chrome.tabs.remove(tabs.filter(tab => tab.id !== newTab.id).map(tab => tab.id));
+        await chrome.tabs.remove(tabs.filter(tab => tab.id !== newTab.id).map(tab => tab.id));
         clearBrowserData();
     }
 });
